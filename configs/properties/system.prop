@@ -27,3 +27,6 @@ ro.vendor.mtk_telephony_add_on_policy=0
 # Netflix
 ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
 ro.netflix.signup=1
+
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
