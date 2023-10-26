@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/infinix/X6815D
+KERNEL_PATH := device/infinix/X6815D-kernel
 
 # Architecture
 TARGET_ARCH := arm64
@@ -46,6 +47,20 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := Infinix-X6815D
 TARGET_NO_BOOTLOADER := true
+
+# Kernel
+TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
+
+BOARD_KERNEL_SEPARATED_DTBO := true
+
+LOCAL_KERNEL := $(KERNEL_PATH)/Image.gz
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/vendor-modules/*.ko)
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6877
