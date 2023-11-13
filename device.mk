@@ -28,7 +28,8 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6877 \
-    fstab.mt6877.vendor_ramdisk
+    fstab.mt6877.vendor_ramdisk \
+    init.recovery.mt6877.rc
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
