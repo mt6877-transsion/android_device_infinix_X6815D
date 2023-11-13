@@ -25,6 +25,11 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.mt6877 \
+    fstab.mt6877.vendor_ramdisk
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
