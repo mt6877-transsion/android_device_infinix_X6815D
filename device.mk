@@ -84,8 +84,19 @@ PRODUCT_COPY_FILES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6877 \
-    fstab.mt6877.vendor_ramdisk \
-    init.recovery.mt6877.rc
+    fstab.mt6877.ramdisk \
+    init.insmod.sh \
+    init.connectivity.rc \
+    init.connectivity.common.rc \
+    init_conninfra.rc \
+    init.mt6877.rc \
+    init.mt6877.power.rc \
+    init.mt6877.usb.rc \
+    init.project.rc \
+    init.modem.rc \
+    init.recovery.usb.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6877.rc
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
