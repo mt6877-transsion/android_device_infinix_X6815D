@@ -205,6 +205,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayX6815D \
     SettingsOverlayX6815D \
     SettingsProviderOverlayX6815D \
+    SystemUIOverlayX6815D \
     TetheringResOverlayX6815D \
     WifiResOverlayX6815D
 
