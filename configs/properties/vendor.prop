@@ -259,3 +259,6 @@ ro.vendor.mtk_tb_wifi_3g_mode=0
 
 # WiFi Display
 ro.vendor.mtk_wfd_support=1
+
+# Zygote
+zygote.critical_window.minute=10
