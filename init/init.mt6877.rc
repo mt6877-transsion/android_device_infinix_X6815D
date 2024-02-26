@@ -932,6 +932,7 @@ service bugreport /system/bin/dumpstate -d -p -B -z \
 
 # end boot time fs tune
 on property:sys.boot_completed=1
+    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
 
 #service dpfd /vendor/bin/dpfd
 #	user root
