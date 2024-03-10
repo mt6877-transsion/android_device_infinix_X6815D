@@ -280,9 +280,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt6877 \
     fstab.mt6877.ramdisk \
+    fstab.zram \
     init.insmod.sh \
     init.connectivity.rc \
-    init.connectivity.common.rc \
     init_conninfra.rc \
     init.mt6877.rc \
     init.mt6877.power.rc \
