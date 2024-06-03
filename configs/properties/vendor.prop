@@ -156,6 +156,9 @@ ro.vendor.mtk_data_config=1
 ro.hardware.kmsetkey=trustonic
 ro.vendor.keymaster_version=4.1
 
+# LMKD
+ro.lmk.kill_heaviest_task=true
+
 # Media
 debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
