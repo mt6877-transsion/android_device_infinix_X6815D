@@ -118,6 +118,9 @@ ro.vendor.mtk_widevine_drm_l1_support=1
 persist.vendor.connsys.fm_chipid=mt6635
 ro.vendor.fm.platform=connac2x
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
 
