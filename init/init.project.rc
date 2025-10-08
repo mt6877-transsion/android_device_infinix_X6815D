@@ -3,11 +3,6 @@
 on early-init
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules trace_mmstat.ko
 
-on init
-    mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
-    mkdir /storage/usbotg 0700 root root
-    write /sys/module/musb_hdrc/parameters/mu3d_force_on 1
-
 on post-fs-data
 
 #Camera
@@ -70,10 +65,3 @@ on property:sys.boot_completed=1
     swapon_all /vendor/etc/memfusion2/fstab.enableswap
 #SPD: modify for swap zram write-back by shuang.zhou at 20201020 end
 
-<<<<<<< HEAD
-=======
-#SPD: modify cpuctl cpu.shares by yifei.liu at 20240327 start
-    write /dev/cpuctl/top-app/cpu.shares 5120
-    write /dev/cpuctl/foreground/cpu.shares 4196
-#SPD: modify cpuctl cpu.shares by yifei.liu at 20240327 end
->>>>>>> 7334429 (X6739: init: Setup zram)
