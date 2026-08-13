@@ -1001,6 +1001,17 @@ vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
+# Tether Offload
+vendor/bin/hw/tetheroffloadservice
+vendor/bin/netdagent
+vendor/etc/init/netdagent.rc
+vendor/etc/init/networksetting.rc
+vendor/etc/init/tetheroffloadservice.rc
+vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so
+vendor/lib64/libforkexecwrap.so
+vendor/lib64/libifcutils_mtk.so
+vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
+
 # THH
 vendor/lib/libthha.so;DISABLE_CHECKELF
 vendor/lib64/libthha.so;DISABLE_CHECKELF
