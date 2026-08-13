@@ -294,6 +294,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libbinder-v32 \
+    libhidlbase-v32 \
+    libutils-v32
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
