@@ -145,6 +145,11 @@ ro.vendor.mtk_nn_baseline_support=1
 ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_support=1
 
+# Power
+vendor.powerhal.interaction.offset=0
+vendor.powerhal.interaction.min=50
+vendor.powerhal.interaction.max=150
+
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.fd.on.charge=0
