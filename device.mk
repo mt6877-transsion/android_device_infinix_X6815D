@@ -202,5 +202,20 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
+    hostapd \
+    libwifi-hal-wrapper \
+    wpa_supplicant
+
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.1.vendor
+
+# Wifi configs
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/infinix/X6815D/X6815D-vendor.mk)
