@@ -99,6 +99,10 @@ debug.sf.enable_adpf_cpu_hint=true
 ro.vendor.mtk_backlight_hwc_support=0
 ro.vendor.composer_version=2.3
 
+# Keymaster
+ro.hardware.kmsetkey=trustonic
+ro.vendor.keymaster_version=4.1
+
 # Neural Networks
 debug.mtk_tflite.target_nnapi=29
 ro.vendor.mtk_nn.option=A,B,E,F,Z
