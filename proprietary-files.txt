@@ -946,6 +946,22 @@ vendor/lib64/libgz_uree.so
 vendor/lib64/libimsg_log.so
 vendor/lib64/libMcClient.so
 
+# Thermal
+vendor/bin/thermal
+vendor/bin/thermal_manager
+vendor/bin/thermalloadalgod
+vendor/etc/.tp/.thermal_policy_08
+vendor/etc/.tp/.thermal_policy_10
+vendor/etc/.tp/.thermal_policy_12
+vendor/etc/.tp/thermal.conf
+vendor/etc/.tp/thermal.off.conf
+vendor/etc/init/init.thermal.rc
+vendor/etc/init/init.thermal_manager.rc
+vendor/etc/init/init.thermalloadalgod.rc
+vendor/lib/libmtcloader.so
+vendor/lib/libthermalalgo.so
+vendor/lib64/libmtcloader.so
+
 # USB
 vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
