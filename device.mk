@@ -96,7 +96,7 @@ PRODUCT_PACKAGES += \
 # DRM (Clearkey)
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
-    
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service
@@ -105,6 +105,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
+
+# Neural networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.0.vendor \
+    android.hardware.neuralnetworks@1.3.vendor \
+    libtextclassifier_hash.vendor
 
 # Permissions
 PRODUCT_COPY_FILES += \

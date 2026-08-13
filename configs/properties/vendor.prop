@@ -96,6 +96,13 @@ debug.sf.enable_adpf_cpu_hint=true
 ro.vendor.mtk_backlight_hwc_support=0
 ro.vendor.composer_version=2.3
 
+# Neural Networks
+debug.mtk_tflite.target_nnapi=29
+ro.vendor.mtk_nn.option=A,B,E,F,Z
+ro.vendor.mtk_nn_baseline_support=1
+ro.vendor.mtk_nn_quant_preferred=1
+ro.vendor.mtk_nn_support=1
+
 # SurfaceFlinger
 debug.sf.disable_client_composition_cache=0
 debug.sf.disable_backpressure=0
