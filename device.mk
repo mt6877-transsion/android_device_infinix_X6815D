@@ -217,6 +217,24 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     ueventd.mt6877.rc
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-service.multihal \
+    android.hardware.sensors@2.0-subhal-impl-1.0:64 \
+    libsensorndkbridge:64 \
+    android.hardware.sensors@1.0.vendor:64 \
+    android.hardware.sensors@2.1.vendor:64 \
+    android.frameworks.sensorservice@1.0:64 \
+    android.frameworks.sensorservice@1.0.vendor:64 \
+    android.hardware.sensors@2.0-ScopedWakelock.vendor:64
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+
+# Secure Element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2.vendor:64
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
