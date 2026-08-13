@@ -115,6 +115,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.km41.xml
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
+
 # IMS
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
