@@ -93,6 +93,10 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_PACKAGES += \
     fastbootd
 
+# DRM (Clearkey)
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey
+    
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service

@@ -17,6 +17,17 @@ vendor.usbsph.dl.pcm.dump=0
 vendor.usbsph.srcaws.pcm.dump=0
 vendor.usbsph.ul.pcm.dump=0
 
+# Bluetooth
+bluetooth.profile.sap.server.enabled=true
+persist.bluetooth.a2dp_offload.cap=sbc-aac
+persist.bluetooth.a2dp_offload.disabled=true
+ro.vendor.bt.platform=6877
+ro.vendor.mtk.bt_sap_enable=true
+vendor.bluetooth.ldac.abr=true
+
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+
 # Display
 debug.cpurend.vsync=false
 graphics.gpu.profiler.support=true
@@ -66,6 +77,11 @@ ro.vendor.smvr.p2batch.vga=32
 ro.vendor.tgpa_resolution_tuner=1
 ro.vendor.tgpa_scaler_time=20200407
 ro.vendor.tgpa_scaler_version=1
+
+# DRM
+drm.service.enabled=true
+ro.netflix.bsp_rev=MTK6877-33678-1
+ro.vendor.mtk_widevine_drm_l1_support=1
 
 # Graphics
 debug.graphics.game_default_frame_rate.disabled=true
