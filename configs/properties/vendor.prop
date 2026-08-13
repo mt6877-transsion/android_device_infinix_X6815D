@@ -94,6 +94,12 @@ ro.hardware.gatekeeper=trustonic
 debug.graphics.game_default_frame_rate.disabled=true
 ro.opengles.version=196610
 
+# GNSS
+ro.vendor.gps.chrdev=gps_drv
+ro.vendor.mtk_agps_app=1
+ro.vendor.mtk_gps_support=1
+ro.vendor.mtk_log_hide_gps=0
+
 # HWUI
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=60
