@@ -946,6 +946,11 @@ vendor/lib64/libgz_uree.so
 vendor/lib64/libimsg_log.so
 vendor/lib64/libMcClient.so
 
+# USB
+vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
+vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
+vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
+
 # Wi-Fi
 vendor/bin/wifi_dump
 vendor/bin/wlan_assistant

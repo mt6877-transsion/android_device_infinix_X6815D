@@ -216,6 +216,9 @@ ro.mtk_key_manager_support=1
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
 
+# UVC
+ro.usb.uvc.enabled=true
+
 # WiFi
 persist.vendor.connsys.chipid=-1
 persist.vendor.connsys.dynamic.dump=0
