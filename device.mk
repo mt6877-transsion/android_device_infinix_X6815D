@@ -118,6 +118,29 @@ PRODUCT_PACKAGES += \
 # IMS
 $(call inherit-product, vendor/mediatek/ims/ims.mk)
 
+# Media
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0.vendor:64 \
+    android.hardware.media.c2@1.1.vendor:64 \
+    android.hardware.media.c2@1.2.vendor:64 \
+    libcodec2_hidl@1.2.vendor:64 \
+    libcodec2_hidl_plugin:64 \
+    libcodec2_vndk.vendor:64 \
+    libeffects:64 \
+    libeffectsconfig.vendor:64 \
+    libavservices_minijail_vendor \
+    libstagefright_softomx_plugin.vendor \
+    libsfplugin_ccodec_utils.vendor \
+    libcodec2_soft_common.vendor \
+    libflatbuffers-cpp.vendor
+
+PRODUCT_PACKAGES += \
+    libstagefright_foundation-v33
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy)
+
 # Neural networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0.vendor \
