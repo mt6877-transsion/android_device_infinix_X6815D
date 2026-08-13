@@ -102,6 +102,12 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.bluetooth.audio@2.1.vendor \
     vendor.mediatek.hardware.bluetooth.audio@2.2.vendor
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0.vendor:64 \
+    android.hardware.camera.device@3.6.vendor:64 \
+    android.hardware.camera.provider@2.6.vendor:64
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
