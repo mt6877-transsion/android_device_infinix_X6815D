@@ -83,6 +83,9 @@ drm.service.enabled=true
 ro.netflix.bsp_rev=MTK6877-33678-1
 ro.vendor.mtk_widevine_drm_l1_support=1
 
+# Gatekeeper
+ro.hardware.gatekeeper=trustonic
+
 # Graphics
 debug.graphics.game_default_frame_rate.disabled=true
 ro.opengles.version=196610
