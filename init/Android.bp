@@ -5,13 +5,6 @@
 //
 
 prebuilt_etc {
-    name: "init.recovery.mt6877.rc",
-    src: "etc/init.recovery.mt6877.rc",
-    recovery: true,
-    sub_dir: "init"
-}
-
-prebuilt_etc {
     name: "fstab.mt6877",
     src: "fstab.mt6877",
     vendor: true,
@@ -40,7 +33,7 @@ prebuilt_etc {
 
 prebuilt_etc {
     name: "init_conninfra.rc",
-    src: "etc/init/hw/init_conninfra.rc",
+    src: "init_conninfra.rc",
     sub_dir: "init/hw",
     vendor: true
 }
@@ -96,6 +89,6 @@ prebuilt_etc {
 
 sh_binary {
     name: "init.insmod.sh",
-    src: "bin/init.insmod.sh",
+    src: "init.insmod.sh",
     vendor: true
 }

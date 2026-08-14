@@ -288,7 +288,7 @@ PRODUCT_PACKAGES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6877 \
-    fstab.mt6877.ramdisk \
+    fstab.mt6877.vendor_ramdisk \
     fstab.zram \
     init.insmod.sh \
     init.connectivity.rc \
@@ -298,9 +298,11 @@ PRODUCT_PACKAGES += \
     init.mt6877.usb.rc \
     init.project.rc \
     init.modem.rc \
-    init.recovery.usb.rc \
     init.sensor_2_0.rc \
     ueventd.mt6877.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.recovery.mt6877.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6877.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
