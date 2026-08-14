@@ -204,6 +204,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FrameworksResOverlayX6815D \
     SettingsOverlayX6815D \
+    SettingsProviderOverlayX6815D \
     TetheringResOverlayX6815D \
     WifiResOverlayX6815D
 
