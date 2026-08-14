@@ -30,3 +30,6 @@ ro.netflix.signup=1
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
+
+# Override Animation
+persist.sys.activity_anim_perf_override=true
