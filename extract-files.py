@@ -35,6 +35,14 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service', 'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so'): blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc': blob_fixup()
+        .add_line_if_missing('    interface android.hardware.media.c2@1.0::IComponentStore default')
+        .add_line_if_missing('    interface android.hardware.media.c2@1.1::IComponentStore default')
+        .add_line_if_missing('    interface android.hardware.media.c2@1.2::IComponentStore default')
+        .regex_replace('@1.2-mediatek', '@1.2-mediatek-64b'),
+    'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so')
+        .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
     ('vendor/bin/mnld', 'vendor/lib64/libaalservice.so', 'vendor/lib64/libcam.utils.sensorprovider.so', 'vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so'): blob_fixup()
         .add_needed('android.hardware.sensors@1.0-convert-shared.so'),
     ('vendor/lib/hw/audio.primary.mt6877.so', 'vendor/lib64/hw/audio.primary.mt6877.so'): blob_fixup()
