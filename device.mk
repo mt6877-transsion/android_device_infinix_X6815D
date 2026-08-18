@@ -302,7 +302,7 @@ PRODUCT_PACKAGES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.mt6877 \
-    fstab.mt6877.vendor_ramdisk \
+    fstab.mt6877.ramdisk \
     fstab.zram \
     init.insmod.sh \
     init.connectivity.rc \
