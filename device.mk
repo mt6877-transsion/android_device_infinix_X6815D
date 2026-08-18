@@ -311,12 +311,10 @@ PRODUCT_PACKAGES += \
     init.mt6877.power.rc \
     init.mt6877.usb.rc \
     init.project.rc \
+    init.recovery.mt6877.rc \
     init.modem.rc \
     init.sensor_2_0.rc \
     ueventd.mt6877.rc
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/init.recovery.mt6877.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6877.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
