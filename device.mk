@@ -363,6 +363,10 @@ PRODUCT_PACKAGES += \
     libhidlbase-v32 \
     libutils-v32
 
+PRODUCT_PACKAGES += \
+    vndservicemanager \
+    vndservice
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
