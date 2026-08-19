@@ -7,18 +7,6 @@
 DEVICE_PATH := device/infinix/X6815D
 KERNEL_PATH := device/infinix/X6815D-kernel
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS := \
-    boot \
-    system \
-    system_ext \
-    vendor \
-    product \
-    vbmeta \
-    vbmeta_system \
-    vbmeta_vendor
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
@@ -73,7 +61,7 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := Infinix-X6815D
+TARGET_BOOTLOADER_BOARD_NAME := X6815D
 TARGET_NO_BOOTLOADER := true
 
 # Display

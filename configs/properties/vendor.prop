@@ -1,3 +1,6 @@
+# APK Verity
+ro.apk_verity.mode=2
+
 # Audio
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
@@ -8,8 +11,8 @@ ro.config.media_vol_default=10
 ro.config.vc_call_vol_default=4
 ro.config.vc_call_vol_steps=11
 ro.vendor.mtk_audio_alac_support=1
-ro.vendor.mtk_audio_tuning_tool_ver=V1
 ro.vendor.mtk_audio_ape_support=1
+ro.vendor.mtk_audio_tuning_tool_ver=V1
 ro.vendor.mtk_hifiaudio_support=1
 vendor.streamin.pcm.dump=0
 vendor.streamout.pcm.dump=0
@@ -56,16 +59,19 @@ vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
 vendor.mtk.camera.app.fd.video=1
 
+# Charging
+ro.vendor.mtk_fast_charging_support=1
+
 # Crypto
 ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display
 debug.cpurend.vsync=false
-graphics.gpu.profiler.support=true
 debug.mediatek.appgamepq_compress=1
 debug.mediatek.disp_decompress=1
-persist.vendor.uxcompaction_enable=true
+graphics.gpu.profiler.support=true
 persist.vendor.sys.mtkaal.function=0
+persist.vendor.uxcompaction_enable=true
 ro.hardware.egl=meow
 ro.hardware.hwcomposer=mtk_common
 ro.hardware.vulkan=mali
@@ -108,7 +114,14 @@ ro.vendor.smvr.p2batch.vga=32
 ro.vendor.tgpa_resolution_tuner=1
 ro.vendor.tgpa_scaler_time=20200407
 ro.vendor.tgpa_scaler_version=1
-persist.vendor.sys.mtkaal.function=0
+
+# Dalvik
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapmaxfree=48m
+dalvik.vm.heapminfree=8m
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=24m
+dalvik.vm.heaptargetutilization=0.46
 
 # DRM
 drm.service.enabled=true
@@ -119,15 +132,8 @@ ro.vendor.mtk_widevine_drm_l1_support=1
 persist.vendor.connsys.fm_chipid=mt6635
 ro.vendor.fm.platform=connac2x
 
-# FUSE passthrough
-persist.sys.fuse.passthrough.enable=true
-
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
-
-# Graphics
-debug.graphics.game_default_frame_rate.disabled=true
-ro.opengles.version=196610
 
 # GNSS
 ro.vendor.gps.chrdev=gps_drv
@@ -135,14 +141,18 @@ ro.vendor.mtk_agps_app=1
 ro.vendor.mtk_gps_support=1
 ro.vendor.mtk_log_hide_gps=0
 
+# Graphics
+debug.graphics.game_default_frame_rate.disabled=true
+ro.opengles.version=196610
+
 # HWUI
-debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=60
+debug.hwui.use_hint_manager=true
 debug.sf.enable_adpf_cpu_hint=true
 
 # HWComposer
-ro.vendor.mtk_backlight_hwc_support=0
 ro.vendor.composer_version=2.3
+ro.vendor.mtk_backlight_hwc_support=0
 
 # IMS
 persist.vendor.ims_support=1
@@ -160,25 +170,31 @@ ro.vendor.mtk_data_config=1
 ro.hardware.kmsetkey=trustonic
 ro.vendor.keymaster_version=4.1
 
-# LMKD
+# LMK
+ro.lmk.filecache_min_kb=153600
 ro.lmk.kill_heaviest_task=true
-ro.lmk.use_psi=true
-ro.lmk.use_minfree_levels=false
-ro.lmk.thrashing_limit_decay=50
-ro.lmk.downgrade_pressure=30
+ro.lmk.kill_timeout_ms=50
+ro.lmk.stall_limit_critical=40
+ro.lmk.swap_free_low_percentage=100
 
 # Media
 debug.stagefright.c2inputsurface=-1
 media.c2.dmabuf.padding=3072
+media.c2.hal.selection=aidl
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.vendor.iomanager.support=1
+ro.vendor.jpeg_decode_sw_opt=1
 ro.vendor.mtk.c2.vdec.fmt.support.level=1
 ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk_video_hevc_enc_support=1
 vendor.media.heif.feature.off=1
 vendor.media.heif.highThreshold=20
 vendor.mtk.vdec.waitkeyframeforplay=9
-ro.vendor.jpeg_decode_sw_opt=1
+
+# Mediatek
+ro.vendor.mediatek.platform=MT6877
+ro.vendor.mediatek.version.branch=alps-mp-s0.mp1
+ro.vendor.mediatek.version.release=alps-mp-s0.mp1.rc-V15.20.2_reallytek.s0mp1rc.k61v1.64.bsp_P48
 
 # Neural Networks
 debug.mtk_tflite.target_nnapi=29
@@ -188,9 +204,9 @@ ro.vendor.mtk_nn_quant_preferred=1
 ro.vendor.mtk_nn_support=1
 
 # Power
-vendor.powerhal.interaction.offset=0
-vendor.powerhal.interaction.min=50
 vendor.powerhal.interaction.max=150
+vendor.powerhal.interaction.min=50
+vendor.powerhal.interaction.offset=0
 
 # Radio
 persist.radio.multisim.config=dsds
@@ -246,15 +262,20 @@ vendor.connsys.driver.ready=no
 # Sensors
 ro.vendor.mtk.sensor.support=yes
 
+# Platform
+ro.soc.manufacturer=Mediatek
+ro.soc.model=MT6877
+
 # SurfaceFlinger
-debug.sf.disable_client_composition_cache=0
 debug.sf.disable_backpressure=0
+debug.sf.disable_client_composition_cache=0
 debug.sf.early.app.duration=14600000
+debug.sf.early.sf.duration=13100000
 debug.sf.earlyGl.app.duration=14600000
 debug.sf.earlyGl.sf.duration=13100000
-debug.sf.early.sf.duration=13100000
-debug.sf.enable_gl_backpressure=0
 debug.sf.enable_adpf_cpu_hint=true
+debug.sf.enable_egl_image_tracker=0
+debug.sf.enable_gl_backpressure=0
 debug.sf.enable_hwc_vds=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.frame_rate_multiple_threshold=120
@@ -272,7 +293,6 @@ ro.surface_flinger.uclamp.min=328
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
-debug.sf.enable_egl_image_tracker=0
 
 # TEE
 ro.mtk_key_manager_support=1
@@ -288,7 +308,8 @@ persist.vendor.connsys.dynamic.dump=0
 persist.vendor.connsys.patch.version=-1
 ro.vendor.connsys.dedicated.log=1
 ro.vendor.connsys.dedicated.log.port=bt,wifi,ics,btmcu,wifimcu
-vendor.connsys.driver.ready=no
+ro.vendor.mtk_tb_wifi_3g_mode=0
+ro.vendor.mtk_wfd_support=1
 ro.vendor.wfd.dummy.enable=0
 ro.vendor.wfd.iframesize.level=0
 ro.vendor.wifi.sap.concurrent.iface=ap1
@@ -296,11 +317,15 @@ ro.vendor.wifi.sap.interface=ap0
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wlan.gen=gen4m
 ro.vendor.wlan.standalone.log=y
-ro.vendor.mtk_wfd_support=1
-ro.vendor.mtk_tb_wifi_3g_mode=0
+vendor.connsys.driver.ready=no
 
 # WiFi Display
 ro.vendor.mtk_wfd_support=1
+
+# ZRAM writeback
+ro.zram.first_wb_delay_mins=1440
+ro.zram.mark_idle_delay_mins=60
+ro.zram.periodic_wb_delay_hours=24
 
 # Zygote
 zygote.critical_window.minute=10

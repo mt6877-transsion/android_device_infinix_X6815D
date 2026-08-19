@@ -16,10 +16,24 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+# AB OTA Configuration
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS := \
+    boot \
+    system \
+    system_ext \
+    vendor \
+    product \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor
+
 PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
-    update_verifier
+    update_verifier \
+    otapreopt_script \
+    checkpoint_gc
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
@@ -36,10 +50,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=$(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE) \
     POSTINSTALL_OPTIONAL_vendor=true
 
-PRODUCT_PACKAGES += \
-    checkpoint_gc \
-    otapreopt_script
-
+# For updating preloader
 PRODUCT_PACKAGES += \
     create_pl_dev \
     create_pl_dev.recovery
@@ -127,8 +138,8 @@ PRODUCT_PACKAGES += \
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_BUILD_SUPER_PARTITION := false
 
+# Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
 
@@ -155,7 +166,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/mtk-tpd.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/mtk-tpd.kl
 
 # Kernel
-PRODUCT_ENABLE_UFFD_GC := false
+PRODUCT_ENABLE_UFFD_GC := true
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Keymaster
